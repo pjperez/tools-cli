@@ -7,7 +7,6 @@ proxycheck = 0 #set to 1 if you want it to tell you what proxies arnt working an
  
  
 try:
-    print("loading proxies...")
     current = open('proxy.txt', 'r')
     proxies = []
     for line in current:
@@ -17,11 +16,6 @@ except:
     print("Unable to read 'proxy.txt'. Please make sure the file exists and contains a list of proxy servers.")
     print("Also make sure you have read permissions.")
     exit()
-print("Proxies loaded. Current proxies:")
-     
-for i in proxies:
-      print i
-print('\n')
  
 pnum = 0
  
@@ -29,7 +23,7 @@ urllib.FancyURLopener.prompt_user_passwd = lambda *a, **k: (None, None)
 
 if not os.path.isdir("./paste")
     os.system("mkdir paste")
- 
+
  
 def download(url,proxy,name):
     global lister
