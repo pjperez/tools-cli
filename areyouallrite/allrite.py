@@ -3,6 +3,11 @@ import sys
 from bs4 import BeautifulSoup
 import requests
 import re
+import sqlite3
+
+conn = sqlite3.connect('sitechecks.db')
+c = conn.cursor()
+
 
 try:
 	url = sys.argv[1]
@@ -50,6 +55,10 @@ def healthCheck(string, r, soup):
 def runCheck():
 	r, soup = getSoup(url, allowredirect)	
 	index = healthCheck(string, r, soup)
+	values = [(url, results[index[0]], str(results[index[1]]))]
+	c.executemany("INSERT INTO checks VALUES (?,?,?)", values)
+	conn.commit()
+	conn.close()
 	print results[index[0]]
 	print "Status code: " + str(results[index[1]])
 
