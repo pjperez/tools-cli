@@ -3,12 +3,12 @@
 
 ### This is just a set of miscellaneous CLI tools. Feel free to download, clone, fork or whatever you would like to do with them.
 
-**hurly**: HTTP status checker
-	Requirements: Human Curl
+**hurly**: HTTP status checker<br />
+	Requirements: Human Curl<br /><br />
     
-**areyouallrite**: Web application health checker
-	Requirements: BeautifulSoup, regexp, requests, sqlite3
+**areyouallrite**: Web application health checker<br />
+	Requirements: BeautifulSoup, regexp, requests, sqlite3<br /><br />
     
-**pastebin-scraper**: Self explanatory :)
+**pastebin-scraper**: Self explanatory :)<br /><br />
 
 pj
