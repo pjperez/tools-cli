@@ -3,7 +3,7 @@
 
 ### This is just a set of miscellaneous CLI tools. Feel free to download, clone, fork or whatever you would like to do with them.
 
-**hurly**: HTTP status checker<br />
+**hurly**: HTTP status code checker<br />
 	Requirements: Human Curl<br /><br />
     
 **areyouallrite**: Web application health checker<br />
